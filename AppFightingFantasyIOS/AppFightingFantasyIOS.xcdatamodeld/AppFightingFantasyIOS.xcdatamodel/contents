@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16C68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Item" representedClassName=".Item" syncable="YES" codeGenerationType="category">
+        <attribute name="descricaoItem" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nomeItem" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="jogo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Jogo" inverseName="itens" inverseEntity="Jogo" syncable="YES"/>
+    </entity>
+    <entity name="Jogo" representedClassName=".Jogo" syncable="YES" codeGenerationType="category">
+        <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ene" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hab" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sor" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="itens" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="jogo" inverseEntity="Item" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Jogo" positionX="-486" positionY="-648" width="128" height="133"/>
+        <element name="Item" positionX="-711" positionY="-621" width="128" height="88"/>
+    </elements>
+</model>
